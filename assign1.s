@@ -78,9 +78,9 @@ main:
 	pushl _b1 
 	popl %ebx 
 	popl %eax 
-	cmpl %eax, $0
+	cmpl $0, %eax
 	jne .OR_true_0 
-	cmpl %ebx, $0
+	cmpl $0, %ebx
 	jne .OR_true_0 
 	pushl $0 
 	jmp .DONE_1 
