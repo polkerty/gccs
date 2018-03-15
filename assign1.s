@@ -47,9 +47,9 @@ main:
 	popl %ebx 
 	popl %eax 
 	xorl %ecx, %ecx
-	movl (%eax), %edx
+	movl %eax, %edx
 	imull (%ebx), %edx
-	movl (%edx), %eax
+	movl %edx, %eax
 	pushl %eax 
 	popl %eax 
 	movl %eax, _y
@@ -160,9 +160,9 @@ main:
 	popl %ebx 
 	popl %eax 
 	xorl %ecx, %ecx
-	movl (%eax), %edx
+	movl %eax, %edx
 	imull (%ebx), %edx
-	movl (%edx), %eax
+	movl %edx, %eax
 	pushl %eax 
 	popl %ebx 
 	popl %eax 
