@@ -47,7 +47,7 @@ int readint() {
 	
 	char c = ' ';
 	int pos = 0;
-	while ( ++pos, c != '\n' && c != EOF && c != '\0') {
+	while ( ++pos, c != '\n' && c != '\0' && c != -1 ) {
 		read(0,&c,1);
 		buf[pos-1] = c;
 	}
