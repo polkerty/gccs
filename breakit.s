@@ -104,8 +104,8 @@ WHILE_top_3:
 	pushl $3 
 	popl %ebx 
 	popl %eax 
-	cmpl %eax, %ebx
-	jbe .GR_false_6 
+	cmpl %ebx, %eax
+	jle .GR_false_6 
 	pushl $1 
 	jmp .DONE_7 
 .GR_false_6:
@@ -133,8 +133,8 @@ WHILE_top_8:
 	pushl $-2 
 	popl %ebx 
 	popl %eax 
-	cmpl %eax, %ebx
-	jbe .GR_false_11 
+	cmpl %ebx, %eax
+	jle .GR_false_11 
 	pushl $1 
 	jmp .DONE_12 
 .GR_false_11:
@@ -163,8 +163,8 @@ WHILE_start_9:
 	pushl $0 
 	popl %ebx 
 	popl %eax 
-	cmpl %eax, %ebx
-	jb .GRE_false_13 
+	cmpl %ebx, %eax
+	jl .GRE_false_13 
 	pushl $1 
 	jmp .DONE_14 
 .GRE_false_13:
