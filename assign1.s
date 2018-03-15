@@ -3,28 +3,28 @@
 # Line 6: x:int
 
 
-	.comm _x 4 4
+	.comm _x ,4 ,4
 
 # Line 7: y:int
 
 
-	.comm _y 4 4
+	.comm _y ,4 ,4
 
 # Line 8: z:int
 
 
-	.comm _z 4 4
+	.comm _z ,4 ,4
 
 # Line 9: b1:boolean
 
 
-	.comm _b1 4 4
+	.comm _b1 ,4 ,4
 
 # Line 10: b2:boolean
 
 
 
-	.comm _b2 4 4
+	.comm _b2 ,4 ,4
 .text
 .global main
 main:
