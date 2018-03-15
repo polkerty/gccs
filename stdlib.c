@@ -38,3 +38,33 @@ void writeint(int num) {
   write(1, result, (writeptr - result) - 1);
   
 }
+
+// https://stackoverflow.com/questions/7380591/what-happened-to-syscalls-h
+// https://stackoverflow.com/questions/19769542/reading-from-file-using-read-function
+int readint() {
+
+	char buf[25];
+	
+	char c = ' ';
+	int pos = 0;
+	while ( ++pos, c != '\n') {
+		read(buf[pos - 1],&c,1);
+		buf[pos-1] = c;
+	}
+	
+	int neg = 0;
+	int sum = 0;
+	for ( int i = 0; i < 25; ++i ) {
+		if ( buf[i] == '-' ) neg = 1;
+		if ( buf[i] >= '0' && buf[i] <= '9' ) {
+			sum *= 10;
+			sum += buf[i] - '0';
+		}
+	}	
+	
+	if ( neg ) sum *= -1;
+	return sum;
+	
+
+}
+
