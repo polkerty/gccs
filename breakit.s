@@ -83,19 +83,6 @@ main:
 	addl $4, %esp
 
 # Line 18: if(true)then
-x:=1
-loopwhilenot(x>3)
-y:=2
-loopwhiley>-2
-y:=y-1
-ifnot(y>=0)then
-out.writeint(y)
-endif
-endloop
-out.writeint(x)
-x:=x+1
-endloop
-endif
 
 	pushl $1 
 	popl %eax 
@@ -111,16 +98,6 @@ _IF_true_0:
 	movl %eax, _x
 
 # Line 20: loopwhilenot(x>3)
-y:=2
-loopwhiley>-2
-y:=y-1
-ifnot(y>=0)then
-out.writeint(y)
-endif
-endloop
-out.writeint(x)
-x:=x+1
-endloop
 
 WHILE_top_3:
 	pushl _x 
@@ -150,11 +127,6 @@ WHILE_start_4:
 	movl %eax, _y
 
 # Line 22: loopwhiley>-2
-y:=y-1
-ifnot(y>=0)then
-out.writeint(y)
-endif
-endloop
 
 WHILE_top_8:
 	pushl _y 
@@ -186,8 +158,6 @@ WHILE_start_9:
 	movl %eax, _y
 
 # Line 24: ifnot(y>=0)then
-out.writeint(y)
-endif
 
 	pushl _y 
 	pushl $0 
