@@ -48,7 +48,7 @@ main:
 	popl %eax 
 	xorl %ecx, %ecx
 	movl %eax, %edx
-	imull (%ebx), %edx
+	imull %ebx, %edx
 	movl %edx, %eax
 	pushl %eax 
 	popl %eax 
@@ -106,9 +106,9 @@ main:
 	pushl $2 
 	popl %ebx 
 	popl %eax 
-	movl (%ebx), %ecx
+	movl %ebx, %ecx
 	cltd  
-	idivl (%ecx) 
+	idivl %ecx 
 	pushl %eax 
 	call writeint 
 	leave  
@@ -161,7 +161,7 @@ main:
 	popl %eax 
 	xorl %ecx, %ecx
 	movl %eax, %edx
-	imull (%ebx), %edx
+	imull %ebx, %edx
 	movl %edx, %eax
 	pushl %eax 
 	popl %ebx 
