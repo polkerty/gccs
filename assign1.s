@@ -97,7 +97,6 @@ main:
 
 	pushl _y 
 	call writeint 
-	leave  
 	addl $4, %esp
 
 # 22: out.writeint(x/2)
@@ -111,7 +110,6 @@ main:
 	idivl %ecx 
 	pushl %eax 
 	call writeint 
-	leave  
 	addl $4, %esp
 
 # Line 24: y:=y-x
@@ -134,7 +132,6 @@ main:
 	addl %ebx, %eax
 	pushl %eax 
 	call writeint 
-	leave  
 	addl $4, %esp
 
 # 26: out.writeint(-(9-5))
@@ -149,7 +146,6 @@ main:
 	negl %eax 
 	pushl %eax 
 	call writeint 
-	leave  
 	addl $4, %esp
 
 # 27: out.writeint(5-2*3+1)
@@ -174,7 +170,6 @@ main:
 	addl %ebx, %eax
 	pushl %eax 
 	call writeint 
-	leave  
 	addl $4, %esp
 	pushl $0 
 	call exit 
