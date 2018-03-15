@@ -29,7 +29,7 @@ main:
 	pushl %eax 
 	popl %ebx 
 	popl %eax 
-	xorl %ecx, %ecx
+	xorl %edx, %edx
 	movl %eax, %edx
 	imull %ebx, %edx
 	movl %edx, %eax
@@ -49,6 +49,7 @@ main:
 	pushl $-1 
 	popl %ebx 
 	popl %eax 
+	xorl %edx, %edx
 	movl %ebx, %ecx
 	cltd  
 	idivl %ecx 
@@ -68,7 +69,7 @@ main:
 	pushl $-1 
 	popl %ebx 
 	popl %eax 
-	xorl %ecx, %ecx
+	xorl %edx, %edx
 	movl %eax, %edx
 	imull %ebx, %edx
 	movl %edx, %eax
