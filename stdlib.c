@@ -55,7 +55,7 @@ int readint() {
 	int neg = 0;
 	int sum = 0;
 	int i = 0;
-	for ( ; i < 25; ++i ) {
+	for ( ; i < pos; ++i ) {
 		if ( buf[i] == '-' ) neg = 1;
 		if ( buf[i] >= '0' && buf[i] <= '9' ) {
 			sum *= 10;
