@@ -1,6 +1,6 @@
 #include <syscall.h>
 
-
+ 
 void writeint(int num) {
   char buf[20];
   char result[20] = "0\n";
